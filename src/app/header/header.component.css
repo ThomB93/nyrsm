@@ -1,0 +1,23 @@
+.navbar-default .navbar-nav>li>a {
+    color: #337ab7;
+    font-size: 16px;
+}
+.navbar-default .navbar-brand {
+    color: #000;
+}
+.active {
+    color: #fff;
+    background-color: #337ab7;
+}
+.logores .navbar-brand {
+  height: 80px;
+}
+
+.logores .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.logores .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}

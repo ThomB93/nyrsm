@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-frivillig-liste></app-frivillig-liste>
+    </div>
+    <div class="col-md-6">
+      <app-frivillig-detaljer *ngIf="selectedFrivillig; else infoText"
+      [frivillig]="selectedFrivillig"></app-frivillig-detaljer>
+      <ng-template #infoText>
+      <p>Vælg venligst en frivillig fra listen!!!!!!!!</p>
+    </ng-template>
+    </div>
+  </div>
+</div>

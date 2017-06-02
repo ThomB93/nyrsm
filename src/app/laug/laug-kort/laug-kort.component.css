@@ -1,0 +1,33 @@
+  .zoomMølle:hover
+  {
+    transition: all 200ms ease-in;
+    x: 325;
+    y: 80;
+    width: 15%;
+    height:15%;
+  }
+
+    .zoomSkib:hover
+  {
+    transition: all 200ms ease-in;
+    x: 30;
+    y: 380;
+    width: 15%;
+    height:15%;
+  }
+  .zoomSmed:hover
+  {
+    transition: all 200ms ease-in;
+    x: 115;
+    y: 80;
+    width: 15%;
+    height:15%;
+  }
+    .zoomKirke:hover
+  {
+    transition: all 200ms ease-in;
+    x: 290;
+    y: 290;
+    width: 15%;
+    height:15%;
+  }
