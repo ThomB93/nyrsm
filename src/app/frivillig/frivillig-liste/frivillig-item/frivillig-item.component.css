@@ -1,0 +1,6 @@
+a.list-group-item, button.list-group-item {
+    color: #000;
+}
+a.list-group-item .list-group-item-heading, button.list-group-item .list-group-item-heading {
+    color: #000;
+}

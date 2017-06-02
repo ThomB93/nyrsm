@@ -1,4 +1,4 @@
-<div class="container">
+
   <div class="row">
     <div class="col-md-6">
       <app-frivillig-liste></app-frivillig-liste>
@@ -7,8 +7,7 @@
       <app-frivillig-detaljer *ngIf="selectedFrivillig; else infoText"
       [frivillig]="selectedFrivillig"></app-frivillig-detaljer>
       <ng-template #infoText>
-      <p>Vælg venligst en frivillig fra listen!!!!!!!!</p>
+      <h3>Vælg venligst en frivillig fra listen!!!!!!!!</h3>
     </ng-template>
     </div>
   </div>
-</div>
