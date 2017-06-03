@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FrivilligComponent } from './frivillig/frivillig.component';
@@ -13,6 +14,7 @@ import { LaugComponent } from './laug/laug.component';
 import { LaugKortComponent } from './laug/laug-kort/laug-kort.component';
 import { LaugDetaljerComponent } from './laug/laug-detaljer/laug-detaljer.component';
 import { FrivilligService } from "app/frivillig/frivillig.service";
+import {LaugService} from "app/laug/laug.service";
 
 @NgModule({
   declarations: [
@@ -24,14 +26,14 @@ import { FrivilligService } from "app/frivillig/frivillig.service";
     FrivilligItemComponent,
     LaugComponent,
     LaugKortComponent,
-    LaugDetaljerComponent
+    LaugDetaljerComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
-  providers: [FrivilligService],
+  providers: [FrivilligService, LaugService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

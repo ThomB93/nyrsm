@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Laug } from "app/laug/laug.model";
 
 @Component({
   selector: 'app-laug-detaljer',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./laug-detaljer.component.css']
 })
 export class LaugDetaljerComponent implements OnInit {
-
+  @Input() laug : Laug;
   constructor() { }
 
   ngOnInit() {

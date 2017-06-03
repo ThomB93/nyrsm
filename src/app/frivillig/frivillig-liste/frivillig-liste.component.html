@@ -1,4 +1,11 @@
+<div class="row">
+<div class="col-md-6">
+  <input type="text" class="form-control" id="id" placeholder="Søg efter frivillig..." [(ngModel)]="term"
+  (ngModelChange)="onChange()">
+</div>
+</div>
+<br>
 <app-frivillig-item
-      *ngFor="let frivilligEl of frivillige"
+      *ngFor="let frivilligEl of filteredList"
       [frivillig]="frivilligEl">
 </app-frivillig-item>

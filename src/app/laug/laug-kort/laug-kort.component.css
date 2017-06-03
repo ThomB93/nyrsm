@@ -1,4 +1,4 @@
-  .zoomMølle:hover
+ .zoomMølle:hover
   {
     transition: all 200ms ease-in;
     x: 325;
@@ -6,7 +6,10 @@
     width: 15%;
     height:15%;
   }
-
+  .zoomMølle
+  {
+  transition: all 200ms ease-in;
+  }
     .zoomSkib:hover
   {
     transition: all 200ms ease-in;
@@ -14,6 +17,10 @@
     y: 380;
     width: 15%;
     height:15%;
+  }
+    .zoomSkib
+  {
+  transition: all 200ms ease-in;
   }
   .zoomSmed:hover
   {
@@ -23,6 +30,10 @@
     width: 15%;
     height:15%;
   }
+    .zoomSmed
+  {
+  transition: all 200ms ease-in;
+  }
     .zoomKirke:hover
   {
     transition: all 200ms ease-in;
@@ -30,4 +41,8 @@
     y: 290;
     width: 15%;
     height:15%;
+  }
+    .zoomKirke
+  {
+  transition: all 200ms ease-in;
   }
