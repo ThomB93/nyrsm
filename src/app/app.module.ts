@@ -15,6 +15,7 @@ import { LaugKortComponent } from './laug/laug-kort/laug-kort.component';
 import { LaugDetaljerComponent } from './laug/laug-detaljer/laug-detaljer.component';
 import { FrivilligService } from "app/frivillig/frivillig.service";
 import {LaugService} from "app/laug/laug.service";
+import { FrivilligeCrudComponent } from './frivillig/frivillig-crud/frivillig-crud.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {LaugService} from "app/laug/laug.service";
     LaugComponent,
     LaugKortComponent,
     LaugDetaljerComponent,
+    FrivilligeCrudComponent,
   ],
   imports: [
     BrowserModule,

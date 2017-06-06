@@ -16,5 +16,4 @@ export class FrivilligItemComponent implements OnInit {
   onSelected() {
     this.frivilligService.frivilligSelected.emit(this.frivillig);
   }
-
 }
