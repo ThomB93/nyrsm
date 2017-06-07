@@ -31,7 +31,9 @@ export class CrudOpretComponent implements OnInit {
     const frivTelefon = this.TelefonNummerInputRef.nativeElement.value;
     const frivEmail = this.EmailInputRef.nativeElement.value;
     const frivImagePath = this.ImagePathInputRef.nativeElement.value;
-    const AddFrivillig = new Frivillig(frivID, frivFornavn, frivEfternavn, frivAdresse, frivPostnr, frivBy, frivTelefon, frivEmail, frivImagePath);
+
+    //Skal forbinde til database i stedet for mock data liste
+    const AddFrivillig = new Frivillig(frivFornavn, frivEfternavn, frivAdresse, frivPostnr, frivBy, frivTelefon, frivEmail, frivImagePath);
     this.FrivilligService.frivillige.push(AddFrivillig);
   }
 

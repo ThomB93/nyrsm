@@ -4,11 +4,10 @@
       <app-laug-kort></app-laug-kort>
     </div>
     <div class="col-md-6">
-      <app-laug-detaljer *ngIf="selectedLaug; else infoText"
-      [laug]="selectedLaug"></app-laug-detaljer>
+      <app-laug-detaljer *ngIf="selectedLaug; else infoText" [laug]="selectedLaug"></app-laug-detaljer>
       <ng-template #infoText>
-      <h3>Vælg venligst et laug på kortet.</h3>
-    </ng-template>
+        <h3>Vælg venligst et laug på kortet.</h3>
+      </ng-template>
     </div>
   </div>
 </div>

@@ -14,6 +14,8 @@ export class CrudSletComponent implements OnInit {
   }
   onDeleteFrivillige() {
     const frivSlet = this.IDdeleteRef.nativeElement.value;
+    
+    //Skal forbinde til database i stedet for mock data liste
     for (var index = 0; index < this.FrivilligService.frivillige.length; index++) {
       if (frivSlet == this.FrivilligService.frivillige[index].id) {
         this.FrivilligService.frivillige.splice(index, 1);

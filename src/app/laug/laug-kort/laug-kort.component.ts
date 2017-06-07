@@ -8,24 +8,31 @@ import {LaugService} from "../laug.service";
   styleUrls: ['./laug-kort.component.css']
 })
 export class LaugKortComponent implements OnInit {
-  laugs : Laug[] = this.laugService.laugs;
+  laugs : any[]; //rå JSON
+  modelLaugs : Laug[] = []; //mappet JSON
 
   constructor(private laugService:LaugService) { }
 
   ngOnInit() {
+    this.laugService.getAllLaug().subscribe(laug => {
+      this.laugs = laug; //save posts in array
+      for (var i = 0; i < this.laugs.length; i++) {//map JSON til Laug objekter
+        this.modelLaugs.push(new Laug(this.laugs[i].navn, this.laugs[i].beskrivelse, this.laugs[i].imagePath)); 
+      }
+    });
   }
-
+  //Udsend valgte laug på kortet vha. index
   skibSelected() {
-    console.log("skib selected"); //test log
-    this.laugService.laugSelected.emit(this.laugs[0]);
+    this.laugService.laugSelected.emit(this.modelLaugs[0]);
   }
   smedSelected() {
-    this.laugService.laugSelected.emit(this.laugs[1]);
-  }
-  kirkeSelected() {
-    this.laugService.laugSelected.emit(this.laugs[2]);
+    this.laugService.laugSelected.emit(this.modelLaugs[1]);
   }
   moelleSelected() {
-    this.laugService.laugSelected.emit(this.laugs[3]);
+    this.laugService.laugSelected.emit(this.modelLaugs[2]);
   }
+  kirkeSelected() {
+    this.laugService.laugSelected.emit(this.modelLaugs[3]);
+  }
+  
 }

@@ -8,25 +8,33 @@ import{ FrivilligService } from '../frivillig.service';
   styleUrls: ['./frivillig-liste.component.css']
 })
 export class FrivilligListeComponent implements OnInit {
-  frivillige: Frivillig[] = this.frivilligService.frivillige;
+  frivillige: any[];
+  modelFrivillige : Frivillig[] = [];
   term : string;
   // Initialize the filtered list to the complete list
-  public filteredList = this.frivillige;
+  filteredList : Frivillig[];
   
   constructor(private frivilligService:FrivilligService) { }
   
   ngOnInit() {
+    this.frivilligService.getAllFrivillige().subscribe(frivillig => {
+      this.frivillige = frivillig; //save posts in array
+      for (var i = 0; i < this.frivillige.length; i++) {//map JSON til frivillig objekter
+        this.modelFrivillige.push(new Frivillig(this.frivillige[i].fornavn, this.frivillige[i].efternavn,
+        this.frivillige[i].adresse, this.frivillige[i].postnr, this.frivillige[i].by,
+        this.frivillige[i].telefon, this.frivillige[i].mail, this.frivillige[i].imagePath)); 
+      }
+      this.filteredList = this.modelFrivillige;
+    });
   }
   public onChange() {
-    //this.term = this.term.toUpperCase();
     // If nothing is in the search box, return to the complete list
     if (!this.term) {
-      this.filteredList = this.frivillige;
+      this.filteredList = this.modelFrivillige;
       return;
     }
-
     // Filter the list (non-case-sensitive)
-    this.filteredList = this.frivillige.filter(item => {
+    this.filteredList = this.modelFrivillige.filter(item => {
       for (let i = 0; i < this.term.length; i++) {
         if (this.term[i].toLowerCase() !== item.fornavn[i].toLowerCase()) {
           return false;
@@ -34,10 +42,5 @@ export class FrivilligListeComponent implements OnInit {
       }
       return true;
     });
-    // Filter the list based on fornavn
-    /*for (var index = 0; index < this.term.length; index++) {
-      var element = this.term[index];
-      this.filteredList = this.frivillige.filter(item => item.fornavn.substr(0, this.term.length-1) === this.term.substr(0, this.term.length-1));
-    }*/
   }
 }

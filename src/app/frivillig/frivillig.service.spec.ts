@@ -11,7 +11,7 @@ describe("FrivilligService", () => { //name of test suite
     }));
     it("Test antallet af frivillige i array", async(
         inject([FrivilligService], (service: FrivilligService) => {
-            service.getAlleFrivillige().then(response => {
+            service.getAlleMockFrivillige().then(response => {
                 expect(response.length).toBe(5);
             })
         })

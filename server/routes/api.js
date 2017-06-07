@@ -84,7 +84,6 @@ router.put("/laug/:id", function(req, res, next) {
         res.json(laug); //respond with single task as json 
     });
     }
-    
 });
 
 module.exports = router;

@@ -3,20 +3,19 @@ export class Frivillig {
     public fornavn: string;
     public efternavn: string;
     public adresse: string;
-    public postnr: number;
+    public postnr: string;
     public by: string;
-    public tlf: number;
+    public telefon: string;
     public mail: string;
     public imagePath: string;
 
-    constructor(id: number, fornavn: string, efternavn: string, adresse: string, postnr: number, by: string, tlf: number, mail: string, imagePath: string){
-        this.id = id;
+    constructor(fornavn: string, efternavn: string, adresse: string, postnr: string, by: string, telefon: string, mail: string, imagePath: string){
         this.fornavn = fornavn;
         this.efternavn = efternavn;
         this.adresse = adresse;
         this.postnr = postnr;
         this.by = by;
-        this.tlf = tlf;
+        this.telefon = telefon;
         this.mail = mail;
         this.imagePath = imagePath;
     }

@@ -32,6 +32,7 @@ export class CrudRedigerComponent implements OnInit {
     const frivEmail = this.EmailUpdateInputRef.nativeElement.value;
     const frivImagePath = this.ImagePathUpdateInputRef.nativeElement.value;
 
+    //Skal forbinde til database i stedet for mock data liste
     for (var index = 0; index < this.FrivilligService.frivillige.length; index++) {
       if (frivUpdateID == this.FrivilligService.frivillige[index].id) {
         if (frivAdresse != "") {
@@ -50,7 +51,7 @@ export class CrudRedigerComponent implements OnInit {
           this.FrivilligService.frivillige[index].by = frivBy;
         }
         if (frivTelefon != "") {
-          this.FrivilligService.frivillige[index].tlf = frivTelefon;
+          this.FrivilligService.frivillige[index].telefon = frivTelefon;
         }
         if (frivEmail != "") {
           this.FrivilligService.frivillige[index].mail = frivEmail;
