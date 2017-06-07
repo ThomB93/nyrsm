@@ -16,6 +16,9 @@ import { LaugDetaljerComponent } from './laug/laug-detaljer/laug-detaljer.compon
 import { FrivilligService } from "app/frivillig/frivillig.service";
 import {LaugService} from "app/laug/laug.service";
 import { FrivilligeCrudComponent } from './frivillig/frivillig-crud/frivillig-crud.component';
+import { CrudOpretComponent } from './frivillig/frivillig-crud/crud-opret/crud-opret.component';
+import { CrudSletComponent } from './frivillig/frivillig-crud/crud-slet/crud-slet.component';
+import { CrudRedigerComponent } from './frivillig/frivillig-crud/crud-rediger/crud-rediger.component';
 
 const ROUTES = [ //when going to root /, redirect to /posts
   {
@@ -41,6 +44,9 @@ const ROUTES = [ //when going to root /, redirect to /posts
     LaugKortComponent,
     LaugDetaljerComponent,
     FrivilligeCrudComponent,
+    CrudOpretComponent,
+    CrudSletComponent,
+    CrudRedigerComponent
   ],
   imports: [
     BrowserModule,
