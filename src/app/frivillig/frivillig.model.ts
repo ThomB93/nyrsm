@@ -2,7 +2,7 @@ export class Frivillig {
     public id: number;
     public fornavn: string;
     public efternavn: string;
-    public adresse: string;
+    public addresse: string;
     public postnr: string;
     public by: string;
     public telefon: string;
@@ -12,7 +12,7 @@ export class Frivillig {
     constructor(fornavn: string, efternavn: string, adresse: string, postnr: string, by: string, telefon: string, mail: string, imagePath: string){
         this.fornavn = fornavn;
         this.efternavn = efternavn;
-        this.adresse = adresse;
+        this.addresse = adresse;
         this.postnr = postnr;
         this.by = by;
         this.telefon = telefon;

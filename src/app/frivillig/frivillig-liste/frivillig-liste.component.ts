@@ -21,7 +21,7 @@ export class FrivilligListeComponent implements OnInit {
       this.frivillige = frivillig; //save posts in array
       for (var i = 0; i < this.frivillige.length; i++) {//map JSON til frivillig objekter
         this.modelFrivillige.push(new Frivillig(this.frivillige[i].fornavn, this.frivillige[i].efternavn,
-        this.frivillige[i].adresse, this.frivillige[i].postnr, this.frivillige[i].by,
+        this.frivillige[i].addresse, this.frivillige[i].postnr, this.frivillige[i].by,
         this.frivillige[i].telefon, this.frivillige[i].mail, this.frivillige[i].imagePath)); 
       }
       this.filteredList = this.modelFrivillige;

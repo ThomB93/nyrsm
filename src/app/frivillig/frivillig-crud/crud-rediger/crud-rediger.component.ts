@@ -36,7 +36,7 @@ export class CrudRedigerComponent implements OnInit {
     for (var index = 0; index < this.FrivilligService.frivillige.length; index++) {
       if (frivUpdateID == this.FrivilligService.frivillige[index].id) {
         if (frivAdresse != "") {
-          this.FrivilligService.frivillige[index].adresse = frivAdresse;
+          this.FrivilligService.frivillige[index].addresse = frivAdresse;
         }
         if (frivFornavn != "") {
           this.FrivilligService.frivillige[index].fornavn = frivFornavn;

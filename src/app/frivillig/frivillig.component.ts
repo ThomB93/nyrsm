@@ -19,5 +19,4 @@ export class FrivilligComponent implements OnInit {
         }
       );
   }
-
 }
